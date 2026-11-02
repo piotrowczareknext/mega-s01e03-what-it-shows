@@ -1,0 +1,26 @@
+support desk · kb
+#4471 review · two causes behind one known ticket
+
+owner support desk
+proposed
+reviewed 2026-11-02
+
+412 reports merged into #4471 · 2 causes
+
+cause   reports   ticket
+parser  379       issue #1
+hint    33        issue #2
+
+The intake tag is only a guess. Classification uses the tenant locale, booking form, and
+channel.
+
+Desk update · 5 October
+
+The parser was fixed with `fix(dates): parse dd/mm for eu locales`; issue #1 is closed as
+completed. The booking-v3 form was retired, so the hint will not be fixed; issue #2 is
+closed as not planned.
+
+5 reports are flagged as one-day moves or other anomalies within the parser group. They are
+already included in its 379 reports, and the export does not establish a separate cause.
+
+desk ref DR-QKJS-FF3R

@@ -1,0 +1,58 @@
+---
+layout: runbook
+title: '#4471 review · two causes behind one known ticket'
+owner: support desk
+status: proposed
+reviewed: 2026-11-02
+signature: piotrowczareknext/mega-s01e03-what-it-shows
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The [original incident](/kb/incidents/4471) records one known issue and one queued fix.
+The exported evidence separates it into two causes.
+
+## Count the reports, not the intake guess
+
+<CauseTable
+  ticket={4471}
+  causeTickets={{
+    parser: { number: 1, url: 'https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1' },
+    hint: { number: 2, url: 'https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2' },
+  }}
+/>
+
+The table deduplicates reports by ID, keeps only reports merged into #4471, and classifies
+them from the tenant locale, booking form, and channel. The intake tag is only a guess.
+
+## Two tickets
+
+- **379 reports**: the shared parser reads dates month-first for day-first tenants. See
+  [issue #1](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1).
+- **33 reports**: booking-v3 shows an `MM/DD/YYYY` hint to day-first tenants, conflicting
+  with the tenant's date order. See
+  [issue #2](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2).
+
+## Desk update · 5 October
+
+The desk closed #4471 after fixing the parser with
+`fix(dates): parse dd/mm for eu locales`. Issue #1 is closed as completed.
+The desk will not fix the hint: the booking-v3 form is retired. Issue #2 is closed as not
+planned, while its 33 reports remain a separate cause from the parser issue.
+
+<Callout>
+The desk flags five one-day moves within the parser group. They are already included in its
+379 reports, and the export does not establish a separate cause. The intake tag and subject
+do not establish cause.
+</Callout>
+
+## Since April
+
+<QueueTimeline ticket={4471} />
+
+<RenderStamp {signature} />
