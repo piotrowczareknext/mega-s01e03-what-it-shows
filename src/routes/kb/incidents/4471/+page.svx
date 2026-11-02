@@ -4,14 +4,12 @@ title: '#4471 · dates parse mm/dd in eu locales'
 owner: support desk
 status: known
 reviewed: 2026-11-02
-signature: piotrowczareknext
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import Callout from '#lib/kb/Callout.svelte';
-  import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
 Since April, people have told us their bookings land on the wrong day: a month flipped. By
@@ -28,13 +26,6 @@ Known. One issue, one fix queued.
 
 <CauseTable ticket={4471} />
 
-The export separates the merged reports into two causes:
-
-- **379 reports**: the shared parser flips day-first dates. This is tracked in [issue
-  #1](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1).
-- **33 reports**: the booking-v3 `MM/DD/YYYY` hint conflicts with day-first tenants. This
-  is tracked in [issue #2](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2).
-
 ## Since April
 
 <QueueTimeline ticket={4471} />
@@ -43,5 +34,3 @@ The export separates the merged reports into two causes:
 
 - A big ticket is mostly one bug reported many times. Merge early, count once.
 - Write the page while the queue is still in your head.
-
-<RenderStamp {signature} />
