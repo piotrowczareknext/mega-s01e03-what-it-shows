@@ -1,0 +1,36 @@
+---
+layout: runbook
+title: '#4471 · dates parse mm/dd in eu locales'
+owner: support desk
+status: known
+reviewed: 2026-11-02
+signature: piotrowczareknext/mega-s01e03-what-it-shows
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Since April, the support desk merged **412 reports** about bookings landing on the wrong day into ticket **#4471**. The export contains two separate causes, so the desk needs two tickets rather than one merged fix.
+
+## Cause 1: shared parser flips day-first dates
+
+**379 reports** are caused by the shared parser reading every date month-first while day-first tenants enter dates day-first. The day and month are swapped in generated calendar invites.
+
+Affected tenants: `alder.physio`, `copper.studio`, `harbour.dental`, `kettle.books`, `lantern.row`, `long.table`, `morrow.tax`, `nine.lanterns`, `pale.harbour`, `ridge.clinic`, and `stone.and.sons`.
+
+Tracked in [issue #1](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1).
+
+## Cause 2: booking-v3 date hint conflicts with locale
+
+**33 reports** are caused by the booking-v3 form showing an `MM/DD/YYYY` hint to day-first tenants. The hint conflicts with the tenant's locale, so users enter dates that the form interprets incorrectly.
+
+Affected tenants: `alder.physio`, `copper.studio`, and `pale.harbour`.
+
+Tracked in [issue #2](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2).
+
+## Triage note
+
+The intake tag is only a guess. The tenant's locale, booking form, and channel determine the cause, so reports with the same subject must not be assigned by subject or intake tag alone.
+
+<RenderStamp {signature} />
