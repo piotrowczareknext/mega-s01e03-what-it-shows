@@ -19,7 +19,13 @@ The exported evidence separates it into two causes.
 
 ## Count the reports, not the intake guess
 
-<CauseTable ticket={4471} />
+<CauseTable
+  ticket={4471}
+  causeTickets={{
+    parser: { number: 1, url: 'https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1' },
+    hint: { number: 2, url: 'https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2' },
+  }}
+/>
 
 The table deduplicates reports by ID, keeps only reports merged into #4471, and classifies
 them from the tenant locale, booking form, and channel. The intake tag is only a guess.
