@@ -38,7 +38,6 @@ static output is under `rendered/kb/incidents/4471-review/`.
 
 - [Parser issue: 379 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1)
 - [Booking-v3 hint issue: 33 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2)
-- [One-day anomaly investigation: 5 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/3)
 
 ---
 

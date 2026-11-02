@@ -15,7 +15,7 @@ signature: piotrowczareknext/mega-s01e03-what-it-shows
 </script>
 
 The [original incident](/kb/incidents/4471) records one known issue and one queued fix.
-The exported evidence separates it into two causes plus a separate anomaly investigation.
+The exported evidence separates it into two causes.
 
 ## Count the reports, not the intake guess
 
@@ -31,13 +31,11 @@ them from the tenant locale, booking form, and channel. The intake tag is only a
 - **33 reports**: booking-v3 shows an `MM/DD/YYYY` hint to day-first tenants, conflicting
   with the tenant's date order. See
   [issue #2](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2).
-- **5 reports**: the desk notes flag a one-day move or other anomaly that is not proven to
-  be either cause. These are a subset of the parser group, not an extra total; investigate
-  them separately in [issue #3](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/3).
 
 <Callout>
-Keep the parser, booking-v3 hint, and one-day anomaly investigations separate. The intake tag
-and subject do not establish cause.
+The desk flags five one-day moves within the parser group. They are already included in its
+379 reports, and the export does not establish a separate cause. The intake tag and subject
+do not establish cause.
 </Callout>
 
 ## Since April

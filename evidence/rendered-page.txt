@@ -14,7 +14,7 @@ hint    33        issue #2
 The intake tag is only a guess. Classification uses the tenant locale, booking form, and
 channel.
 
-5 reports are flagged as one-day moves or other anomalies. They are a subset of the parser
-group, not an extra total, and are tracked separately in issue #3.
+5 reports are flagged as one-day moves or other anomalies within the parser group. They are
+already included in its 379 reports, and the export does not establish a separate cause.
 
 desk ref DR-QKJS-FF3R
