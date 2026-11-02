@@ -15,7 +15,7 @@ signature: piotrowczareknext/mega-s01e03-what-it-shows
 </script>
 
 The [original incident](/kb/incidents/4471) records one known issue and one queued fix.
-The exported evidence separates it into two causes, so engineering needs one ticket for each.
+The exported evidence separates it into two causes plus a separate anomaly investigation.
 
 ## Count the reports, not the intake guess
 
