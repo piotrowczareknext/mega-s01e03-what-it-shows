@@ -31,6 +31,15 @@ src/lib/data/       exports from the ticket system
 
 Support desk. Decision records: whoever signed them.
 
+## Ticket #4471 review
+
+The signed review is rendered at `src/routes/kb/incidents/4471-review/+page.svx` and its
+static output is under `rendered/kb/incidents/4471-review/`.
+
+- [Parser issue: 379 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/1)
+- [Booking-v3 hint issue: 33 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/2)
+- [One-day anomaly investigation: 5 reports](https://github.com/piotrowczareknext/mega-s01e03-what-it-shows/issues/3)
+
 ---
 
 Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
